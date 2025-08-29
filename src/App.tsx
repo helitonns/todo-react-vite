@@ -1,11 +1,10 @@
-
+import Text from "./components/text";
 
 function App() {
-
   return (
-    <div>
-      Olá Mundo!  
-    </div>
+    <Text variant="body-md" className="text-pink-base">
+      Olá Mundo!
+    </Text>
   );
 }
 
