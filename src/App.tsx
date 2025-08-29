@@ -1,11 +1,7 @@
-import Text from "./components/text";
+import Button from "./components/buttton";
 
 function App() {
-  return (
-    <Text variant="body-md" className="text-pink-base">
-      Olá Mundo!
-    </Text>
-  );
+  return <Button>Salvar</Button>;
 }
 
 export default App;
