@@ -1,6 +1,6 @@
 import { cva, type VariantProps } from "class-variance-authority";
 
-export const iconvariant = cva("", {
+export const iconVariants = cva("", {
   variants: {
     animate: {
       false: "",
@@ -14,7 +14,7 @@ export const iconvariant = cva("", {
 
 interface IconProps
   extends React.ComponentProps<"svg">,
-    VariantProps<typeof iconvariant> {
+    VariantProps<typeof iconVariants> {
   svg: React.FC<React.ComponentProps<"svg">>;
 }
 
@@ -25,6 +25,6 @@ export default function Icon({
   ...props
 }: IconProps) {
   return (
-    <SvgComponent className={iconvariant({ animate, className })} {...props} />
+    <SvgComponent className={iconVariants({ animate, className })} {...props} />
   );
 }
