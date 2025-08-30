@@ -4,6 +4,7 @@ import PlusIcon from "./assets/icons/plus.svg?react";
 import SpinnerIcon from "./assets/icons/spinner.svg?react";
 import ButtonIcon from "./components/button-icon";
 import Button from "./components/buttton";
+import InputCheckbox from "./components/input-checkbox";
 import InputText from "./components/input-text";
 
 function App() {
@@ -20,6 +21,10 @@ function App() {
 
       <div>
         <InputText />
+      </div>
+
+      <div>
+        <InputCheckbox />
       </div>
     </div>
   );
