@@ -4,6 +4,7 @@ import PlusIcon from "./assets/icons/plus.svg?react";
 import SpinnerIcon from "./assets/icons/spinner.svg?react";
 import ButtonIcon from "./components/button-icon";
 import Button from "./components/buttton";
+import Card from "./components/card";
 import InputCheckbox from "./components/input-checkbox";
 import InputText from "./components/input-text";
 
@@ -25,6 +26,10 @@ function App() {
 
       <div>
         <InputCheckbox />
+      </div>
+
+       <div>
+        <Card size="md">Olá mundo</Card>
       </div>
     </div>
   );
