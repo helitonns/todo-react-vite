@@ -5,12 +5,13 @@ import SpinnerIcon from "./assets/icons/spinner.svg?react";
 import ButtonIcon from "./components/button-icon";
 import Button from "./components/buttton";
 import Card from "./components/card";
+import Container from "./components/container";
 import InputCheckbox from "./components/input-checkbox";
 import InputText from "./components/input-text";
 
 function App() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen gap-8 bg-gray-100">
+    <Container className="flex flex-col gap-8 pt-20">
       <Button icon={SpinnerIcon} >Salvar</Button>
 
       <div className="flex gap-1">
@@ -31,7 +32,7 @@ function App() {
        <div>
         <Card size="md">Olá mundo</Card>
       </div>
-    </div>
+    </Container>
   );
 }
 
