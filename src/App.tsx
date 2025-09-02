@@ -2,12 +2,14 @@ import CheckIcon from "./assets/icons/check.svg?react";
 import PencilIcon from "./assets/icons/pencil.svg?react";
 import PlusIcon from "./assets/icons/plus.svg?react";
 import SpinnerIcon from "./assets/icons/spinner.svg?react";
+import Badge from "./components/badge";
 import ButtonIcon from "./components/button-icon";
 import Button from "./components/buttton";
 import Card from "./components/card";
 import Container from "./components/container";
 import InputCheckbox from "./components/input-checkbox";
 import InputText from "./components/input-text";
+import Skeleton from "./components/skeleton";
 
 function App() {
   return (
@@ -19,18 +21,32 @@ function App() {
         <ButtonIcon icon={PencilIcon} variant={"secondary"}/>
         <ButtonIcon icon={PlusIcon}  variant={"tertiary"}/>
         <ButtonIcon icon={SpinnerIcon} />
+        <ButtonIcon icon={SpinnerIcon} loading/>
       </div>
 
+      <div className="flex gap-2">
+        <Badge loading >1</Badge>
+        <Badge >2 de 5</Badge>
+        <Badge loading >3</Badge>
+      </div>
+      
       <div>
         <InputText />
       </div>
 
-      <div>
+      <div className="flex gap-2">
         <InputCheckbox />
+        <InputCheckbox loading/>
       </div>
 
        <div>
         <Card size="md">Olá mundo</Card>
+      </div>
+
+      <div className="space-y-2">
+        <Skeleton className="h-6" />
+        <Skeleton className="h-6"/>
+        <Skeleton className="w-36 h-6" />
       </div>
     </Container>
   );

@@ -1,0 +1,25 @@
+import { cva, type VariantProps } from "class-variance-authority";
+
+
+
+export const skeletonVariants = cva("animate-pulse bg-gray-200 pointer-events-none caret-transparent", {
+  variants: {
+    rounded: {
+      sm: "rounded-sm",
+      lg: "rounded-lg",
+      full: "rounded-full",
+    }
+  },
+  defaultVariants: {
+    rounded: "lg"
+  }
+});
+
+export interface SkeletonProps extends VariantProps<typeof skeletonVariants>,
+React.ComponentProps<"div"> {};
+
+export default function Skeleton({ className, rounded, ...props }: SkeletonProps) {
+  return (
+    <div className={skeletonVariants({ className, rounded })} {...props} />
+  );
+}
