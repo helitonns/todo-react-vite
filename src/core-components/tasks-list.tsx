@@ -6,11 +6,18 @@ import TaskItem from "./task-item";
 
 export default function TaskList() {
   const { task } = useTasks();
-  
+  const { prepareTask } = useTasks();
+
+  function handleCreateNewTask() {
+    prepareTask();
+  }
+
   return (
     <>
       <section>
-        <Button className="w-full"  icon={PlusIcon}>Nova tarefa</Button>
+        <Button className="w-full"  icon={PlusIcon} onClick={handleCreateNewTask}>
+          Nova tarefa
+        </Button>
       </section>
 
       <section className="space-y-2">
