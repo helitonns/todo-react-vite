@@ -1,9 +1,12 @@
 import PlusIcon from "../assets/icons/plus.svg?react";
 import Button from "../components/buttton";
+import useTasks from "../hooks/use-tasks";
 import TaskItem from "./task-item";
 
 
 export default function TaskList() {
+  const { task } = useTasks();
+  
   return (
     <>
       <section>
