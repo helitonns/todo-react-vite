@@ -16,7 +16,12 @@ export default function TaskList() {
   return (
     <>
       <section>
-        <Button className="w-full"  icon={PlusIcon} onClick={handleNewTask}>
+        <Button 
+          className="w-full"  
+          icon={PlusIcon} 
+          onClick={handleNewTask} 
+          disabled={tasks.some(task => task.state === "creating")}
+        >
           Nova tarefa
         </Button>
       </section>
